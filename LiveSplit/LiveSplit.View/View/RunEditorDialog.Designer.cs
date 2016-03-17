@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxGameName = new LiveSplit.View.CustomAutoCompleteComboBox(this);
             this.cbxRunCategory = new System.Windows.Forms.ComboBox();
             this.tbxTimeOffset = new System.Windows.Forms.TextBox();
             this.picGameIcon = new System.Windows.Forms.PictureBox();
@@ -78,6 +77,7 @@
             this.cleanSumOfBestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iRunBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iSegmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnImages = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.runGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGameIcon)).BeginInit();
@@ -109,7 +109,7 @@
             this.runGrid.Name = "runGrid";
             this.runGrid.RowHeadersVisible = false;
             this.runGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.tableLayoutPanel1.SetRowSpan(this.runGrid, 8);
+            this.tableLayoutPanel1.SetRowSpan(this.runGrid, 9);
             this.runGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.runGrid.Size = new System.Drawing.Size(530, 295);
             this.runGrid.TabIndex = 0;
@@ -128,11 +128,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.cbxGameName, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbxRunCategory, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.tbxTimeOffset, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.picGameIcon, 0, 1);
@@ -140,7 +138,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tabControl, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.tbxAttempts, 6, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 6, 14);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 6, 15);
             this.tableLayoutPanel1.Controls.Add(this.lblDescription, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnInsert, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 0, 7);
@@ -149,12 +147,13 @@
             this.tableLayoutPanel1.Controls.Add(this.btnMoveDown, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.btnAddComparison, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.btnImportComparison, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.btnOther, 0, 13);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnOther, 0, 14);
+            this.tableLayoutPanel1.Controls.Add(this.btnImages, 0, 13);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 15;
+            this.tableLayoutPanel1.RowCount = 16;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -168,9 +167,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 511);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -209,18 +208,6 @@
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Start Timer at:";
-            // 
-            // cbxGameName
-            // 
-            this.cbxGameName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.cbxGameName, 5);
-            this.cbxGameName.GetAllItemsForText = null;
-            this.cbxGameName.Location = new System.Drawing.Point(246, 12);
-            this.cbxGameName.Margin = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.cbxGameName.Name = "cbxGameName";
-            this.cbxGameName.Size = new System.Drawing.Size(427, 21);
-            this.cbxGameName.TabIndex = 1;
-            this.cbxGameName.TextChanged += new System.EventHandler(this.cbxGameName_TextChanged);
             // 
             // cbxRunCategory
             // 
@@ -477,7 +464,7 @@
             // 
             this.btnOther.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOther.Location = new System.Drawing.Point(10, 376);
+            this.btnOther.Location = new System.Drawing.Point(10, 405);
             this.btnOther.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnOther.Name = "btnOther";
             this.btnOther.Size = new System.Drawing.Size(120, 23);
@@ -542,7 +529,7 @@
             this.openFromURLMenuItem,
             this.removeIconToolStripMenuItem});
             this.RemoveIconMenu.Name = "RemoveIconMenu";
-            this.RemoveIconMenu.Size = new System.Drawing.Size(170, 136);
+            this.RemoveIconMenu.Size = new System.Drawing.Size(170, 114);
             // 
             // setIconToolStripMenuItem
             // 
@@ -647,6 +634,18 @@
             // 
             this.iSegmentBindingSource.DataSource = typeof(LiveSplit.Model.ISegment);
             // 
+            // btnImages
+            // 
+            this.btnImages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImages.Location = new System.Drawing.Point(10, 376);
+            this.btnImages.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.btnImages.Name = "btnImages";
+            this.btnImages.Size = new System.Drawing.Size(120, 23);
+            this.btnImages.TabIndex = 19;
+            this.btnImages.Text = "Image Comparison";
+            this.btnImages.UseVisualStyleBackColor = true;
+            // 
             // RunEditorDialog
             // 
             this.AcceptButton = this.btnOK;
@@ -694,7 +693,6 @@
         private System.Windows.Forms.ContextMenuStrip RemoveIconMenu;
         private System.Windows.Forms.ToolStripMenuItem removeIconToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setIconToolStripMenuItem;
-        private CustomAutoCompleteComboBox cbxGameName;
         private System.Windows.Forms.ComboBox cbxRunCategory;
         private System.Windows.Forms.TextBox tbxTimeOffset;
         private System.Windows.Forms.TextBox tbxAttempts;
@@ -726,5 +724,6 @@
         private System.Windows.Forms.Button btnWebsite;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem downloadIconToolStripMenuItem;
+        private System.Windows.Forms.Button btnImages;
     }
 }

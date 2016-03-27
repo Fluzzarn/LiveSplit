@@ -56,11 +56,12 @@
             this.btnMoveDown = new System.Windows.Forms.Button();
             this.btnAddComparison = new System.Windows.Forms.Button();
             this.btnImportComparison = new System.Windows.Forms.Button();
-            this.btnOther = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnWebsite = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnActivate = new System.Windows.Forms.Button();
+            this.btnOther = new System.Windows.Forms.Button();
+            this.btnImages = new System.Windows.Forms.Button();
             this.RemoveIconMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.setIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadBoxartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +78,6 @@
             this.cleanSumOfBestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iRunBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iSegmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnImages = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.runGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGameIcon)).BeginInit();
@@ -460,19 +460,6 @@
             this.btnImportComparison.UseVisualStyleBackColor = true;
             this.btnImportComparison.Click += new System.EventHandler(this.btnImportComparison_Click);
             // 
-            // btnOther
-            // 
-            this.btnOther.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOther.Location = new System.Drawing.Point(10, 405);
-            this.btnOther.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.btnOther.Name = "btnOther";
-            this.btnOther.Size = new System.Drawing.Size(120, 23);
-            this.btnOther.TabIndex = 15;
-            this.btnOther.Text = "Other...";
-            this.btnOther.UseVisualStyleBackColor = true;
-            this.btnOther.Click += new System.EventHandler(this.btnOther_Click);
-            // 
             // flowLayoutPanel1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel1, 3);
@@ -519,6 +506,32 @@
             this.btnActivate.Text = "Activate";
             this.btnActivate.UseVisualStyleBackColor = true;
             this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
+            // 
+            // btnOther
+            // 
+            this.btnOther.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOther.Location = new System.Drawing.Point(10, 405);
+            this.btnOther.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.btnOther.Name = "btnOther";
+            this.btnOther.Size = new System.Drawing.Size(120, 23);
+            this.btnOther.TabIndex = 15;
+            this.btnOther.Text = "Other...";
+            this.btnOther.UseVisualStyleBackColor = true;
+            this.btnOther.Click += new System.EventHandler(this.btnOther_Click);
+            // 
+            // btnImages
+            // 
+            this.btnImages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImages.Location = new System.Drawing.Point(10, 376);
+            this.btnImages.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.btnImages.Name = "btnImages";
+            this.btnImages.Size = new System.Drawing.Size(120, 23);
+            this.btnImages.TabIndex = 19;
+            this.btnImages.Text = "Image Comparison";
+            this.btnImages.UseVisualStyleBackColor = true;
+            this.btnImages.Click += new System.EventHandler(this.btnImages_Click);
             // 
             // RemoveIconMenu
             // 
@@ -633,18 +646,6 @@
             // iSegmentBindingSource
             // 
             this.iSegmentBindingSource.DataSource = typeof(LiveSplit.Model.ISegment);
-            // 
-            // btnImages
-            // 
-            this.btnImages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImages.Location = new System.Drawing.Point(10, 376);
-            this.btnImages.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.btnImages.Name = "btnImages";
-            this.btnImages.Size = new System.Drawing.Size(120, 23);
-            this.btnImages.TabIndex = 19;
-            this.btnImages.Text = "Image Comparison";
-            this.btnImages.UseVisualStyleBackColor = true;
             // 
             // RunEditorDialog
             // 

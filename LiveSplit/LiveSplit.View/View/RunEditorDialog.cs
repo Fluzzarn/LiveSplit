@@ -30,6 +30,8 @@ namespace LiveSplit.View
         private const int BESTSEGMENTINDEX = 4;
         private const int CUSTOMCOMPARISONSINDEX = 5;
 
+
+        public CustomAutoCompleteComboBox cbxGameName { get; set; }
         public IRun Run { get; set; }
         public LiveSplitState CurrentState { get; set; }
         protected BindingList<ISegment> SegmentList { get; set; }
@@ -187,6 +189,8 @@ namespace LiveSplit.View
             runGrid.Columns.Add(column);
 
             runGrid.EditingControlShowing += runGrid_EditingControlShowing;
+
+            cbxGameName = new CustomAutoCompleteComboBox(this);
 
             cbxGameName.DataBindings.Add("Text", this, "GameName");
             cbxRunCategory.DataBindings.Add("Text", this, "CategoryName");
@@ -1463,6 +1467,11 @@ namespace LiveSplit.View
                     SetClickEvents(childControl);
             }
             control.Click += ClickControl;
+        }
+
+        private void btnImages_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

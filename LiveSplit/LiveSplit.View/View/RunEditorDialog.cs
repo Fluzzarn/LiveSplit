@@ -6,6 +6,7 @@ using LiveSplit.UI;
 using LiveSplit.Web;
 using LiveSplit.Utils;
 using LiveSplit.Web.Share;
+using ImageBasedAutoSplit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -1471,7 +1472,8 @@ namespace LiveSplit.View
 
         private void btnImages_Click(object sender, EventArgs e)
         {
-
+            var imageForm = new ImageEditorDialog(CurrentState);
+            var result = imageForm.ShowDialog(this);
         }
     }
 

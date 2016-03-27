@@ -13,5 +13,6 @@ namespace LiveSplit.Model
         Time BestSegmentTime { get; set; }
         Time SplitTime { get; set; }
         SegmentHistory SegmentHistory { get; set; }
+        string ImageCompPath { get; set; }
     }
 }

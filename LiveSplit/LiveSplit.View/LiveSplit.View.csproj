@@ -309,6 +309,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ImageBasedAutoSplit\LiveSplit.ImageBasedAutoSplit.csproj">
+      <Project>{b39b4d63-2c80-4e2a-a8c7-744478a77e11}</Project>
+      <Name>LiveSplit.ImageBasedAutoSplit</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Libs\SpeedrunComSharp\SpeedrunComSharp\SpeedrunComSharp.csproj">
       <Project>{924aaffe-5b89-49e2-99ad-ec9373cc838d}</Project>
       <Name>SpeedrunComSharp</Name>

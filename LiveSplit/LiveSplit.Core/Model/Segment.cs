@@ -20,6 +20,8 @@ namespace LiveSplit.Model
         public SegmentHistory SegmentHistory { get; set;}
         
         public Bitmap ComparisonImage { get; set; }
+        public string ImageCompPath { get; set; }
+
 
         public Segment(
             string name, Time pbSplitTime = default(Time), 

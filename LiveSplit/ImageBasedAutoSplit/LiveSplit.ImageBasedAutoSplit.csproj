@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\ImageBasedAutoSplitComponent.cs" />
+    <Compile Include="UI\ImageBasedAutoSplitter.cs" />
+    <Compile Include="UI\ImageBasedAutoSplitterFactory.cs" />
     <Compile Include="UI\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +88,10 @@
     <ProjectReference Include="..\LiveSplit.Core\LiveSplit.Core.csproj">
       <Project>{6de847db-20a3-4848-aeee-1b4364aecdfb}</Project>
       <Name>LiveSplit.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UpdateManager\UpdateManager.csproj">
+      <Project>{56DEA3A0-2EB7-493B-B50F-A5E3AA8AE52A}</Project>
+      <Name>UpdateManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

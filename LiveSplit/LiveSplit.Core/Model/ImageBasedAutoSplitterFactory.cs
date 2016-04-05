@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LiveSplit.Model;
 
-namespace ImageBasedAutoSplit.UI
+namespace LiveSplit.Model
 {
     public class ImageBasedAutoSplitterFactory
     {

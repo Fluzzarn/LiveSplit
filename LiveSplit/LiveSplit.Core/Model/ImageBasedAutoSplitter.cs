@@ -24,13 +24,13 @@ namespace Livesplit.Model
                 {
                     foreach (var split in state.Run)
                     {
-                        if(split.ImageCompPath != null)
+                        if (split.ImageCompPath != null)
                         {
                             Component = Factory.Create(state);
                             break;
                         }
                     }
-                
+
                 }
                 catch (Exception ex)
                 {

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Xml;
 using System.Text;
+using Livesplit.Model;
 
 namespace LiveSplit.Model
 {
@@ -29,6 +30,7 @@ namespace LiveSplit.Model
 
         bool HasChanged { get; set; }
         string FilePath { get; set; }
+        ImageBasedAutoSplitter ImageSplitter { get; set; }
     }
 
     public static class RunExtensions

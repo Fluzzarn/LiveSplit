@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Xml;
+using Livesplit.Model;
 
 namespace LiveSplit.Model
 {
@@ -77,6 +78,11 @@ namespace LiveSplit.Model
 
         public AutoSplitter AutoSplitter { get; set; }
         public XmlElement AutoSplitterSettings { get; set; }
+
+        public ImageBasedAutoSplitter ImageSplitter
+        {
+            get; set;
+        }
 
         public IList<IComparisonGenerator> ComparisonGenerators { get; set; }
         public IList<string> CustomComparisons { get; set; }

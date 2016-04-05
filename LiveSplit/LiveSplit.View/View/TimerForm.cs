@@ -1492,8 +1492,14 @@ namespace LiveSplit.View
             InvalidationRequired = true;
             RegenerateComparisons();
             SwitchComparison(CurrentState.CurrentComparison);
+            CreateImageBasedAutoSplitter();
             CreateAutoSplitter();
             CurrentState.FixTimingMethodFromRuleset();
+        }
+
+        private void CreateImageBasedAutoSplitter()
+        {
+            var splitter = ImageBasedAutoSplit.UI.ImageBasedAutoSplitterFactory.Instance.Create(CurrentState);
         }
 
         private void CreateAutoSplitter()

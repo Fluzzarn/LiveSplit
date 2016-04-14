@@ -116,16 +116,16 @@ namespace Livesplit.Model
             }
 
 
-            //if (ImagesToDispose.Any())
-            //{
-            //    foreach (var img in ImagesToDispose)
-            //    {
-            //        img.Dispose();
-            //
-            //    }
-            //
-            //    ImagesToDispose.Clear();
-            //}
+            if (ImagesToDispose.Any())
+            {
+                foreach (var img in ImagesToDispose)
+                {
+                    img.Dispose();
+            
+                }
+            
+                ImagesToDispose.Clear();
+            }
         }
 
         public override Control GetSettingsControl(LayoutMode mode)

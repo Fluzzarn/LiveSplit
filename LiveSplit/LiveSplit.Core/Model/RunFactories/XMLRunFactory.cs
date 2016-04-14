@@ -134,7 +134,8 @@ namespace LiveSplit.Model.RunFactories
                     if (!split.SegmentHistory.ContainsKey(indexedTime.Index))
                         split.SegmentHistory.Add(indexedTime.Index, indexedTime.Time);
                 }
-
+                split.ImageSimilarityThreshold = int.Parse(segmentElement["ImageThreshold"].GetAttribute("threshold"));
+                split.ImageCompPath = segmentElement["ImageCompPath"].GetAttribute("path");
                 run.Add(split);
             }
 

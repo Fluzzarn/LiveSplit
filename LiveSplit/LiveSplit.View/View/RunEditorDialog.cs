@@ -191,8 +191,6 @@ namespace LiveSplit.View
 
             runGrid.EditingControlShowing += runGrid_EditingControlShowing;
 
-            cbxGameName = new CustomAutoCompleteComboBox(this);
-
             cbxGameName.DataBindings.Add("Text", this, "GameName");
             cbxRunCategory.DataBindings.Add("Text", this, "CategoryName");
             tbxTimeOffset.DataBindings.Add("Text", this, "Offset");
@@ -1573,6 +1571,7 @@ namespace LiveSplit.View
 
         public void CloseDropDown()
         {
+            if(_dropDown != null)
             _dropDown.Close();
         }
 

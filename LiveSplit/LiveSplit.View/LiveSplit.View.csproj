@@ -214,6 +214,7 @@
     <Compile Include="Web\Share\SpeedrunComRunUploadPlatform.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="LiveSplit.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

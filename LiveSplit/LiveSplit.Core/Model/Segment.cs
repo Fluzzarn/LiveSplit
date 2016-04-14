@@ -21,7 +21,7 @@ namespace LiveSplit.Model
         
         public Bitmap ComparisonImage { get; set; }
         public string ImageCompPath { get; set; }
-
+        public int ImageSimilarityThreshold { get; set; }
 
         public Segment(
             string name, Time pbSplitTime = default(Time), 
@@ -50,7 +50,9 @@ namespace LiveSplit.Model
                 Icon = Icon,
                 SegmentHistory = newSegmentHistory,
                 Comparisons = (IComparisons)Comparisons.Clone(),
-                ComparisonImage = ComparisonImage
+                ComparisonImage = ComparisonImage,
+                ImageSimilarityThreshold = ImageSimilarityThreshold,
+                ImageCompPath = ImageCompPath
             };
         }
 

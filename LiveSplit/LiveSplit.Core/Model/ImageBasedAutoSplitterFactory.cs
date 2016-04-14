@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LiveSplit.Model;
+using Livesplit.Model;
 
 namespace LiveSplit.Model
 {
@@ -23,9 +24,9 @@ namespace LiveSplit.Model
             }
         }
 
-        public object Create(LiveSplitState currentState)
+        public ImageBasedAutoSplitter Create(LiveSplitState currentState)
         {
-            throw new NotImplementedException();
+            return new ImageBasedAutoSplitter();
         }
     }
 }

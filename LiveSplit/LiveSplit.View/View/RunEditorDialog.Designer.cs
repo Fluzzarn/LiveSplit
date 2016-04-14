@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cbxGameName = new CustomAutoCompleteComboBox(this);
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RunEditorDialog));
             this.runGrid = new System.Windows.Forms.DataGridView();
@@ -35,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbxGameName = new LiveSplit.View.CustomAutoCompleteComboBox(this);
             this.cbxRunCategory = new System.Windows.Forms.ComboBox();
             this.tbxTimeOffset = new System.Windows.Forms.TextBox();
             this.picGameIcon = new System.Windows.Forms.PictureBox();
@@ -128,9 +130,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbxGameName, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbxRunCategory, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.tbxTimeOffset, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.picGameIcon, 0, 1);
@@ -208,6 +212,18 @@
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Start Timer at:";
+            // 
+            // cbxGameName
+            // 
+            this.cbxGameName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.cbxGameName, 5);
+            this.cbxGameName.GetAllItemsForText = null;
+            this.cbxGameName.Location = new System.Drawing.Point(246, 12);
+            this.cbxGameName.Margin = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.cbxGameName.Name = "cbxGameName";
+            this.cbxGameName.Size = new System.Drawing.Size(427, 21);
+            this.cbxGameName.TabIndex = 1;
+            this.cbxGameName.TextChanged += new System.EventHandler(this.cbxGameName_TextChanged);
             // 
             // cbxRunCategory
             // 
@@ -511,7 +527,7 @@
             // 
             this.btnOther.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOther.Location = new System.Drawing.Point(10, 405);
+            this.btnOther.Location = new System.Drawing.Point(10, 376);
             this.btnOther.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnOther.Name = "btnOther";
             this.btnOther.Size = new System.Drawing.Size(120, 23);

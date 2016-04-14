@@ -68,8 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UI\ImageBasedAutoSplitComponent.cs" />
-    <Compile Include="UI\ImageBasedAutoSplitter.cs" />
-    <Compile Include="UI\ImageBasedAutoSplitterFactory.cs" />
     <Compile Include="UI\Settings.cs">
       <SubType>Form</SubType>
     </Compile>

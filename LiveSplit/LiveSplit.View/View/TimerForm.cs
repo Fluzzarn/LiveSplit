@@ -1,4 +1,5 @@
-﻿using LiveSplit.Model;
+﻿using Livesplit.Model;
+using LiveSplit.Model;
 using LiveSplit.Model.Comparisons;
 using LiveSplit.Model.Input;
 using LiveSplit.Model.RunFactories;
@@ -1045,6 +1046,11 @@ namespace LiveSplit.View
                         if (CurrentState.Run.IsAutoSplitterActive())
                             CurrentState.Run.AutoSplitter.Component.Update(null, CurrentState, 0, 0, Layout.Mode);
 
+                        if(CurrentState.Run.IsImageSplitterActive())
+                        {
+                            CurrentState.Run.ImageSplitter.Component.Update(null, CurrentState, 0, 0, Layout.Mode);
+                        }
+
                         if (DontRedraw)
                             return;
 
@@ -1499,7 +1505,14 @@ namespace LiveSplit.View
 
         private void CreateImageBasedAutoSplitter()
         {
-            var splitter = ImageBasedAutoSplit.UI.ImageBasedAutoSplitterFactory.Instance.Create(CurrentState);
+            var splitter = new ImageBasedAutoSplitter();
+            if(splitter != null)
+            {
+                splitter.Activate(CurrentState);
+                if(splitter.IsActivated)
+                    CurrentState.Run.ImageSplitter = splitter;
+            }
+
         }
 
         private void CreateAutoSplitter()

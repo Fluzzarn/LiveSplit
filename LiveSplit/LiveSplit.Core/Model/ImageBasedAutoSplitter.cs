@@ -26,7 +26,7 @@ namespace Livesplit.Model
                     {
                         if (split.ImageCompPath != null)
                         {
-                            Component = Factory.Create(state);
+                            Component = new ImageBasedAutoSplitComponent(state);
                             break;
                         }
                     }

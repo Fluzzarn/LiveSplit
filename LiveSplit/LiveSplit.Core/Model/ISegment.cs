@@ -14,5 +14,6 @@ namespace LiveSplit.Model
         Time SplitTime { get; set; }
         SegmentHistory SegmentHistory { get; set; }
         string ImageCompPath { get; set; }
+        int ImageSimilarityThreshold { get; set; }
     }
 }

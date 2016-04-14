@@ -78,6 +78,8 @@ namespace LiveSplit.Model.RunSavers
 
                 splitElement.AppendChild(segment.BestSegmentTime.ToXml(document, "BestSegmentTime"));
 
+                    
+
                 var history = document.CreateElement("SegmentHistory");
                 foreach (var historySegment in segment.SegmentHistory)
                 {
@@ -85,6 +87,14 @@ namespace LiveSplit.Model.RunSavers
                     history.AppendChild(indexedTime.ToXml(document));
                 }
                 splitElement.AppendChild(history);
+
+                var splitImagePath = document.CreateElement("ImageCompPath");
+                splitImagePath.Attributes.Append(ToAttribute(document, "path", segment.ImageCompPath));
+                splitElement.AppendChild(splitImagePath);
+
+                var splitSimilarityThreshold = document.CreateElement("ImageThreshold");
+                splitSimilarityThreshold.Attributes.Append(ToAttribute(document, "threshold", segment.ImageSimilarityThreshold));
+                splitElement.AppendChild(splitSimilarityThreshold);
             }
 
             var autoSplitterSettings = document.CreateElement("AutoSplitterSettings");
